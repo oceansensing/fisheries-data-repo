@@ -1,7 +1,8 @@
 # fisheries-data-repo: the founding plan and running record
 
 Fisheries' **management areas**: FAO's fishing areas and the regional fishery bodies', the U.S. councils' and regions', ICES's and Canada's. Created on GitHub by the owner and given its documents by the site's
-`pipeline/scaffold/new-origin.py`. **Nothing is published yet.**
+`pipeline/scaffold/new-origin.py`. **Publishing since 2026-11-20** (the first dispatched run, `44861041352`, 03:25 UTC
+on the 21st: all fifteen products fresh, 33,908 files to R2), **its schedule daily** since.
 
 ## What it is for
 
@@ -13,7 +14,11 @@ Each source is read from its publisher's own service. **FAO** (`www.fao.org/fish
 
 ## Open
 
-1. The first dispatched run, read: fifteen products fresh, every root and `land/<product>/` on R2 alone, and the R2 job's time for the first upload of every tile.
-2. A second run the next day: none due, the same versions, nothing uploaded.
-3. Then the daily schedule.
+1. ~~The first dispatched run, read~~ — 2026-11-20, run `44861041352`: fifteen products fresh — 370 FAO areas, 92
+   regional bodies' areas, 8 councils' regions, 62 groundfish areas, 336 GARFO regulated areas, 135 statistical areas,
+   237 HAPC, 158 EFH areas closed, 19 coral protection areas, 225 restrictions, 66 ICES areas, 11,074 rectangles, 250
+   DFO areas, 39 NAFO divisions, 61 marine refuges — the build 20 min 28 s, the R2 job 24 min 40 s for its first
+   upload (33,908 files, read back equal to the built tree).
+2. The daily schedule, on since 2026-11-20 (`53 10 * * *`), and the dispatch's `due` input: its first run, the next
+   day, read — none due, the same versions, nothing uploaded.
 4. A month of runs read: GARFO's services as they are added and superseded, and FAO's records as their licenses are reread.
