@@ -1,0 +1,239 @@
+# What this repository publishes: fisheries' management areas, fifteen products, each a root of every record and a
+# pyramid of Mapbox vector tiles made from it, `land/<product>/` (an index and its versioned tiles): FAO's Major
+# Fishing Areas and the regional fishery bodies' areas of competence; the eight U.S. Regional Fishery Management
+# Councils' regions; NOAA Fisheries' West Coast groundfish conservation areas, its Greater Atlantic regulated and
+# statistical areas, its habitat areas of particular concern, its essential fish habitat areas protected from
+# fishing and its compilation of bottom-gear and trawl restrictions; MarineCadastre's deep-sea coral protection
+# areas; ICES's areas and statistical rectangles; and Fisheries and Oceans Canada's Atlantic and Arctic fisheries
+# management areas, NAFO divisions and marine refuges. The fetcher is the site's `scripts/fetch-fisheries.py`,
+# whose docstring carries the measurements; the tiles are written by the site's `scripts/land_tiles.py`, through
+# `scripts/fetch-maritime.py`'s machinery.
+#
+# **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every file of
+# each product is published to Cloudflare R2 and not to Pages, which carries the status alone; the roots
+# stay on the `published` branch, where the next run seeds from them. `trees` names the folder each product
+# writes beside its root (the orchestrator's, 2026-10-20), so it goes to R2 with it.
+#
+# **Each step runs every run; each source is read on its own cadence.** A tree is never banked, so each
+# pyramid is made again from its published root on every run, whether the workflow's cache restored it or
+# not, and the fetcher reads a source itself only once its root is that old (`every_hours` in the fetcher):
+# the West Coast's groundfish areas and GARFO's regulated areas weekly (a rule can move them in any week), the
+# councils' regions and GARFO's statistical areas quarterly, the rest monthly. **Never give a step
+# `every_hours`**: a step not run writes no `land/`.
+#
+# **The budgets.** Where a service gives no date of its own (FAO's WFS, the West Coast's, ICES's and Fisheries and
+# Oceans Canada's map services), a product's hour is the read's own: the groundfish areas 360 hours, a week's read,
+# one missed and a day; the rest 1,500, a month's read, one missed and a few days. Where the service gives its
+# layer's last data edit (NOAA Fisheries' and MarineCadastre's feature services), the hour is that edit, which an
+# old date is no fault of: no budget.
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+[steps.fao-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=fao-areas"]
+lane = "www.fao.org"
+
+[steps.fishery-bodies]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=fishery-bodies"]
+lane = "www.fao.org"
+
+[steps.council-regions]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=council-regions"]
+lane = "services2.arcgis.com"
+
+[steps.groundfish-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=groundfish-areas"]
+lane = "maps.fisheries.noaa.gov"
+
+[steps.garfo-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=garfo-areas"]
+lane = "services2.arcgis.com"
+timeout_minutes = 40
+
+[steps.statistical-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=statistical-areas"]
+lane = "services2.arcgis.com"
+
+[steps.hapc]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=hapc"]
+lane = "services2.arcgis.com"
+
+[steps.fishing-restrictions]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=fishing-restrictions"]
+lane = "services2.arcgis.com"
+
+[steps.efh-closed-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=efh-closed-areas"]
+lane = "services2.arcgis.com"
+
+[steps.coral-protection]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=coral-protection"]
+lane = "coast.noaa.gov"
+
+[steps.ices-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=ices-areas"]
+lane = "gis.ices.dk"
+
+[steps.ices-rectangles]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=ices-rectangles"]
+lane = "gis.ices.dk"
+
+[steps.dfo-areas]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=dfo-areas"]
+lane = "egisp.dfo-mpo.gc.ca"
+timeout_minutes = 30
+
+[steps.nafo-divisions]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=nafo-divisions"]
+lane = "egisp.dfo-mpo.gc.ca"
+
+[steps.marine-refuges]
+cmd = ["python3", "scripts/fetch-fisheries.py", "--only=marine-refuges"]
+lane = "egisp.dfo-mpo.gc.ca"
+
+[products.fao-areas]
+title = "FAO Major Fishing Areas for Statistical Purposes, from the major areas to their subunits (FAO, CC BY 4.0)"
+step = "fao-areas"
+roots = ["fao-areas.json"]
+writes = ["fao-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=fao-areas"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/fao-areas"]
+
+[products.fishery-bodies]
+title = "Regional fishery bodies' areas of competence, each body FAO licenses CC BY 4.0, with its citation (FAO)"
+step = "fishery-bodies"
+roots = ["fishery-bodies.json"]
+writes = ["fishery-bodies.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=fishery-bodies"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/fishery-bodies"]
+
+[products.council-regions]
+title = "The eight U.S. Regional Fishery Management Councils' regions, state waters included (NOAA)"
+step = "council-regions"
+roots = ["council-regions.json"]
+writes = ["council-regions.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=council-regions"]
+r2_only = true
+trees = ["land/council-regions"]
+
+[products.groundfish-areas]
+title = "West Coast groundfish conservation areas: rockfish, yelloweye rockfish and cowcod conservation areas and groundfish exclusion areas (NOAA Fisheries West Coast Region)"
+step = "groundfish-areas"
+roots = ["groundfish-areas.json"]
+writes = ["groundfish-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=groundfish-areas"]
+max_age_hours = 360
+r2_only = true
+trees = ["land/groundfish-areas"]
+
+[products.garfo-areas]
+title = "Greater Atlantic regulated fishing areas: closures, gear, mesh, exemption and management areas (NOAA Fisheries GARFO)"
+step = "garfo-areas"
+roots = ["garfo-areas.json"]
+writes = ["garfo-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=garfo-areas"]
+r2_only = true
+trees = ["land/garfo-areas"]
+
+[products.statistical-areas]
+title = "Greater Atlantic Region statistical areas, 2010 (NOAA Fisheries GARFO)"
+step = "statistical-areas"
+roots = ["statistical-areas.json"]
+writes = ["statistical-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=statistical-areas"]
+r2_only = true
+trees = ["land/statistical-areas"]
+
+[products.hapc]
+title = "Habitat areas of particular concern (NOAA Fisheries, Office of Habitat Conservation)"
+step = "hapc"
+roots = ["hapc.json"]
+writes = ["hapc.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=hapc"]
+r2_only = true
+trees = ["land/hapc"]
+
+[products.fishing-restrictions]
+title = "Bottom-gear and trawl fishing restrictions in U.S. waters, a NOAA compilation (NOAA Fisheries, Office of Habitat Conservation)"
+step = "fishing-restrictions"
+roots = ["fishing-restrictions.json"]
+writes = ["fishing-restrictions.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=fishing-restrictions"]
+r2_only = true
+trees = ["land/fishing-restrictions"]
+
+[products.efh-closed-areas]
+title = "Essential fish habitat areas protected from fishing (NOAA Fisheries, Office of Habitat Conservation)"
+step = "efh-closed-areas"
+roots = ["efh-closed-areas.json"]
+writes = ["efh-closed-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=efh-closed-areas"]
+r2_only = true
+trees = ["land/efh-closed-areas"]
+
+[products.coral-protection]
+title = "Deep-sea coral protection areas closed to bottom-tending gear (NOAA Office for Coastal Management, MarineCadastre.gov)"
+step = "coral-protection"
+roots = ["coral-protection.json"]
+writes = ["coral-protection.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=coral-protection"]
+r2_only = true
+trees = ["land/coral-protection"]
+
+[products.ices-areas]
+title = "ICES areas: the subareas, divisions, subdivisions and units of FAO area 27 (ICES, CC BY 4.0)"
+step = "ices-areas"
+roots = ["ices-areas.json"]
+writes = ["ices-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=ices-areas"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/ices-areas"]
+
+[products.ices-rectangles]
+title = "ICES statistical rectangles (ICES, CC BY 4.0)"
+step = "ices-rectangles"
+roots = ["ices-rectangles.json"]
+writes = ["ices-rectangles.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=ices-rectangles"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/ices-rectangles"]
+
+[products.dfo-areas]
+title = "Atlantic and Arctic Canada's fisheries management areas, species by species (Fisheries and Oceans Canada, OGL-Canada)"
+step = "dfo-areas"
+roots = ["dfo-areas.json"]
+writes = ["dfo-areas.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=dfo-areas"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/dfo-areas"]
+
+[products.nafo-divisions]
+title = "NAFO subareas, divisions and subdivisions (Fisheries and Oceans Canada, OGL-Canada)"
+step = "nafo-divisions"
+roots = ["nafo-divisions.json"]
+writes = ["nafo-divisions.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=nafo-divisions"]
+max_age_hours = 1500
+r2_only = true
+trees = ["land/nafo-divisions"]
+
+[products.marine-refuges]
+title = "Canada's marine refuges and other effective area-based conservation measures (Fisheries and Oceans Canada, OGL-Canada)"
+step = "marine-refuges"
+roots = ["marine-refuges.json"]
+writes = ["marine-refuges.json"]
+namespace = ["python3", "scripts/fetch-fisheries.py", "--namespace", "--only=marine-refuges"]
+r2_only = true
+trees = ["land/marine-refuges"]
