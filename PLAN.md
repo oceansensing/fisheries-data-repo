@@ -19,6 +19,6 @@ Each source is read from its publisher's own service. **FAO** (`www.fao.org/fish
    237 HAPC, 158 EFH areas closed, 19 coral protection areas, 225 restrictions, 66 ICES areas, 11,074 rectangles, 250
    DFO areas, 39 NAFO divisions, 61 marine refuges — the build 20 min 28 s, the R2 job 24 min 40 s for its first
    upload (33,908 files, read back equal to the built tree).
-2. The daily schedule, on since 2026-11-20 (`53 10 * * *`), and the dispatch's `due` input: its first run, the next
-   day, read — none due, the same versions, nothing uploaded.
+2. ~~The daily schedule's first run~~ (`53 10 * * *`, on since 2026-11-20, with the dispatch's `due` input) —
+   2026-11-21, run `44896771048`, green.
 4. A month of runs read: GARFO's services as they are added and superseded, and FAO's records as their licenses are reread.

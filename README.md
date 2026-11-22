@@ -10,8 +10,11 @@ got wrong and the shared doc doctrine.
 
 Fifteen products, each a root of every record (`<product>.json`: its shape as GeoJSON and what its source says of it) and the same records as a pyramid of Mapbox vector tiles beside it (uncompressed, extent 4096, Web Mercator, the XYZ scheme; `land/<product>/index.json` naming the version, the tiles' own hash, and every tile to zoom 8), R2's alone: **`fao-areas`**, zooms 0 to 6, FAO's Major Fishing Areas for Statistical Purposes from the 19 major areas to their subunits, each with its code, level, names and status; **`fishery-bodies`**, zooms 0 to 6, the regional fishery bodies' areas of competence, each body whose FAO record licenses it CC BY 4.0, with that body's citation; **`council-regions`**, zooms 1 to 8, the eight U.S. Regional Fishery Management Councils' regions; **`groundfish-areas`**, zooms 4 to 11, NOAA Fisheries West Coast Region's groundfish conservation areas with their whole schema (group, constancy, seasonal and effective dates, status, FMP, the Federal Register citation and link, the CFR's, the boundary's last update); **`garfo-areas`**, zooms 7 to 9, NOAA Fisheries Greater Atlantic Regional Fisheries Office's regulated areas merged from its services, each with its group, its recurring season, its CFR paragraph and its Federal Register citation, the reference lines as lines; **`statistical-areas`**, zooms 3 to 8, the Greater Atlantic Region's statistical areas; **`hapc`**, **`efh-closed-areas`** and **`fishing-restrictions`**, zooms 3 to 10, NOAA Fisheries' habitat areas of particular concern, its essential fish habitat areas protected from fishing, and its Office of Habitat Conservation's compilation of the areas where bottom-tending gear or trawling is prohibited; **`coral-protection`**, zooms 4 to 11, the deep-sea coral protection areas of 50 CFR 648.372; **`ices-areas`**, zooms 2 to 7, and **`ices-rectangles`**, zooms 4 to 7, ICES's areas and its statistical rectangles; **`dfo-areas`**, zooms 3 to 9, Atlantic and Arctic Canada's fisheries management areas, species by species; **`nafo-divisions`**, zooms 2 to 7; and **`marine-refuges`**, zooms 4 to 10, Canada's marine refuges and other effective area-based conservation measures with their prohibitions. Every root says, in its publisher's words, what its GIS is not, and in a sentence of its own that emergency and in-season closures are never in it. A set's version is its tiles' own hash, so an unchanged rebuild publishes nothing new.
 
-These products are published **operationally but not drawn on the website's map**; the map's status
-line still reports them when they fall behind, which is how their health stays visible.
+These products are published **operationally but not drawn on the
+website's map**. R2 alone carries them, so this repository's Pages status names none of
+them: the map's status line and the site's watchdog see only whether the
+origin publishes. Their fates are in the status on R2 and on the
+`published` branch.
 
 ## Where the data comes from
 
@@ -25,9 +28,9 @@ run time. This repository carries `pipeline/products.toml` and its publish
 workflow, and nothing else executable. Each run publishes to GitHub Pages and
 to Cloudflare R2 from one build. Related repositories: `maritime-data-repo` (its machinery, the same pyramids), `public-lands-data-repo` (polygons and lines on the same machinery).
 
-**Which document gets what, and what "update docs" means across all
-thirty-seven repositories, is the doctrine block at the top of `CLAUDE.md`**: the
-same text in all thirty-seven, held equal by the site's `check:docs`.
+**Which document gets what, and what "update docs" means across every
+repository of this project, is the doctrine block at the top of `CLAUDE.md`**: the
+same text in each, held equal by the site's `check:docs`.
 
 ## Structure
 
