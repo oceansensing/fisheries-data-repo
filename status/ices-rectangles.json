@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "ices-rectangles",
+ "title": "ICES statistical rectangles (ICES, CC BY 4.0)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T16:55:03Z",
+ "modelRun": null,
+ "source": "ICES",
+ "hours": [
+  "2026-11-21T16:55:03Z"
+ ],
+ "files": {
+  "ices-rectangles.json": {
+   "bytes": 2165195,
+   "sha256": "3802c3b9295aaee96c61d9c6c5212a6ea72ff201158fee16b3df907b167c982b"
+  }
+ },
+ "trees": {
+  "land/ices-rectangles": "f7c9d8b5253e"
+ }
+}

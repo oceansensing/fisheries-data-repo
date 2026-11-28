@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "council-regions",
+ "title": "The eight U.S. Regional Fishery Management Councils' regions, state waters included (NOAA)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2024-02-07T21:10:03Z",
+ "modelRun": null,
+ "source": "NOAA",
+ "hours": [
+  "2024-02-07T21:10:03Z"
+ ],
+ "files": {
+  "council-regions.json": {
+   "bytes": 9331655,
+   "sha256": "b1e6859d93a0efab48fe86e1a0a271a6e0611e648a0e51e82dce9e0fb3cc0bc9"
+  }
+ },
+ "trees": {
+  "land/council-regions": "2df613787b95"
+ }
+}

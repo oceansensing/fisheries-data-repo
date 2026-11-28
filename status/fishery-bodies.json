@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "fishery-bodies",
+ "title": "Regional fishery bodies' areas of competence, each body FAO licenses CC BY 4.0, with its citation (FAO)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T16:51:56Z",
+ "modelRun": null,
+ "source": "FAO",
+ "hours": [
+  "2026-11-21T16:51:56Z"
+ ],
+ "files": {
+  "fishery-bodies.json": {
+   "bytes": 15462474,
+   "sha256": "b85a62e242ad86631b7b992a513f020d8f3a92d0f07a2750743ad9ecdf82ce51"
+  }
+ },
+ "trees": {
+  "land/fishery-bodies": "0294e6c3cc47"
+ }
+}

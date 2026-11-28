@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "efh-closed-areas",
+ "title": "Essential fish habitat areas protected from fishing (NOAA Fisheries, Office of Habitat Conservation)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-01-27T13:16:49Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries",
+ "hours": [
+  "2026-01-27T13:16:49Z"
+ ],
+ "files": {
+  "efh-closed-areas.json": {
+   "bytes": 1666374,
+   "sha256": "7687309e76d12939c019717ee5d0c6452198b99600c3f342327c988684694fe5"
+  }
+ },
+ "trees": {
+  "land/efh-closed-areas": "3bb9f3cfa821"
+ }
+}

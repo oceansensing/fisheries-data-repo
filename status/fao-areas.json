@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "fao-areas",
+ "title": "FAO Major Fishing Areas for Statistical Purposes, from the major areas to their subunits (FAO, CC BY 4.0)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T16:50:22Z",
+ "modelRun": null,
+ "source": "FAO",
+ "hours": [
+  "2026-11-21T16:50:22Z"
+ ],
+ "files": {
+  "fao-areas.json": {
+   "bytes": 25601087,
+   "sha256": "ff2ea31398c28b53a9674b695a3edb5a683d510a862421260ed0108ada131965"
+  }
+ },
+ "trees": {
+  "land/fao-areas": "768689162d39"
+ }
+}

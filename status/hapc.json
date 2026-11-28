@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "hapc",
+ "title": "Habitat areas of particular concern (NOAA Fisheries, Office of Habitat Conservation)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-07-01T20:59:08Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries",
+ "hours": [
+  "2026-07-01T20:59:08Z"
+ ],
+ "files": {
+  "hapc.json": {
+   "bytes": 12457012,
+   "sha256": "878e94e8b182900a4da3cfd1794498a49ef33411a3c0ee74ece156e91656dcdf"
+  }
+ },
+ "trees": {
+  "land/hapc": "df63da4b1691"
+ }
+}

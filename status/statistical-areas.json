@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "statistical-areas",
+ "title": "Greater Atlantic Region statistical areas, 2010 (NOAA Fisheries GARFO)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2020-07-30T22:53:28Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries GARFO",
+ "hours": [
+  "2020-07-30T22:53:28Z"
+ ],
+ "files": {
+  "statistical-areas.json": {
+   "bytes": 3060275,
+   "sha256": "d13e5577b6a8349bf0b18142dfccd8d3af5bb18b904d679c198efdda4fe4ac6e"
+  }
+ },
+ "trees": {
+  "land/statistical-areas": "13343d971e64"
+ }
+}

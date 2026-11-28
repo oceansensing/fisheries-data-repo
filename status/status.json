@@ -1,0 +1,318 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-11-28T11:01:11Z",
+ "mode": "full",
+ "run": {
+  "id": "46137525859",
+  "url": "https://github.com/oceansensing/fisheries-data-repo/actions/runs/46137525859"
+ },
+ "schedule": {
+  "crons": [
+   "53 10 * * *"
+  ],
+  "longestGapHours": 24.0
+ },
+ "products": {
+  "fao-areas": {
+   "title": "FAO Major Fishing Areas for Statistical Purposes, from the major areas to their subunits (FAO, CC BY 4.0)",
+   "roots": [
+    "fao-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:50:22Z",
+   "modelRun": null,
+   "source": "FAO",
+   "hours": [
+    "2026-11-21T16:50:22Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.18,
+   "nearestOffsetHours": 162.18
+  },
+  "fishery-bodies": {
+   "title": "Regional fishery bodies' areas of competence, each body FAO licenses CC BY 4.0, with its citation (FAO)",
+   "roots": [
+    "fishery-bodies.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:51:56Z",
+   "modelRun": null,
+   "source": "FAO",
+   "hours": [
+    "2026-11-21T16:51:56Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.15,
+   "nearestOffsetHours": 162.15
+  },
+  "council-regions": {
+   "title": "The eight U.S. Regional Fishery Management Councils' regions, state waters included (NOAA)",
+   "roots": [
+    "council-regions.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2024-02-07T21:10:03Z",
+   "modelRun": null,
+   "source": "NOAA",
+   "hours": [
+    "2024-02-07T21:10:03Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 24589.85,
+   "nearestOffsetHours": 24589.85
+  },
+  "groundfish-areas": {
+   "title": "West Coast groundfish conservation areas: rockfish, yelloweye rockfish and cowcod conservation areas and groundfish exclusion areas (NOAA Fisheries West Coast Region)",
+   "roots": [
+    "groundfish-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:50:21Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries West Coast Region",
+   "hours": [
+    "2026-11-21T16:50:21Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.18,
+   "nearestOffsetHours": 162.18
+  },
+  "garfo-areas": {
+   "title": "Greater Atlantic regulated fishing areas: closures, gear, mesh, exemption and management areas (NOAA Fisheries GARFO)",
+   "roots": [
+    "garfo-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-04-29T17:40:38Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries GARFO",
+   "hours": [
+    "2026-04-29T17:40:38Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 5105.34,
+   "nearestOffsetHours": 5105.34
+  },
+  "statistical-areas": {
+   "title": "Greater Atlantic Region statistical areas, 2010 (NOAA Fisheries GARFO)",
+   "roots": [
+    "statistical-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2020-07-30T22:53:28Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries GARFO",
+   "hours": [
+    "2020-07-30T22:53:28Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 55476.13,
+   "nearestOffsetHours": 55476.13
+  },
+  "hapc": {
+   "title": "Habitat areas of particular concern (NOAA Fisheries, Office of Habitat Conservation)",
+   "roots": [
+    "hapc.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-07-01T20:59:08Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries",
+   "hours": [
+    "2026-07-01T20:59:08Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 3590.03,
+   "nearestOffsetHours": 3590.03
+  },
+  "fishing-restrictions": {
+   "title": "Bottom-gear and trawl fishing restrictions in U.S. waters, a NOAA compilation (NOAA Fisheries, Office of Habitat Conservation)",
+   "roots": [
+    "fishing-restrictions.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2025-09-26T16:18:41Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries",
+   "hours": [
+    "2025-09-26T16:18:41Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 10266.71,
+   "nearestOffsetHours": 10266.71
+  },
+  "efh-closed-areas": {
+   "title": "Essential fish habitat areas protected from fishing (NOAA Fisheries, Office of Habitat Conservation)",
+   "roots": [
+    "efh-closed-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-01-27T13:16:49Z",
+   "modelRun": null,
+   "source": "NOAA Fisheries",
+   "hours": [
+    "2026-01-27T13:16:49Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 7317.74,
+   "nearestOffsetHours": 7317.74
+  },
+  "coral-protection": {
+   "title": "Deep-sea coral protection areas closed to bottom-tending gear (NOAA Office for Coastal Management, MarineCadastre.gov)",
+   "roots": [
+    "coral-protection.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2022-02-23T14:23:41Z",
+   "modelRun": null,
+   "source": "NOAA Office for Coastal Management, MarineCadastre.gov",
+   "hours": [
+    "2022-02-23T14:23:41Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 41732.63,
+   "nearestOffsetHours": 41732.63
+  },
+  "ices-areas": {
+   "title": "ICES areas: the subareas, divisions, subdivisions and units of FAO area 27 (ICES, CC BY 4.0)",
+   "roots": [
+    "ices-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:53:10Z",
+   "modelRun": null,
+   "source": "ICES",
+   "hours": [
+    "2026-11-21T16:53:10Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.13,
+   "nearestOffsetHours": 162.13
+  },
+  "ices-rectangles": {
+   "title": "ICES statistical rectangles (ICES, CC BY 4.0)",
+   "roots": [
+    "ices-rectangles.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:55:03Z",
+   "modelRun": null,
+   "source": "ICES",
+   "hours": [
+    "2026-11-21T16:55:03Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.1,
+   "nearestOffsetHours": 162.1
+  },
+  "dfo-areas": {
+   "title": "Atlantic and Arctic Canada's fisheries management areas, species by species (Fisheries and Oceans Canada, OGL-Canada)",
+   "roots": [
+    "dfo-areas.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T16:55:28Z",
+   "modelRun": null,
+   "source": "Fisheries and Oceans Canada",
+   "hours": [
+    "2026-11-21T16:55:28Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.1,
+   "nearestOffsetHours": 162.1
+  },
+  "nafo-divisions": {
+   "title": "NAFO subareas, divisions and subdivisions (Fisheries and Oceans Canada, OGL-Canada)",
+   "roots": [
+    "nafo-divisions.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T17:00:17Z",
+   "modelRun": null,
+   "source": "Fisheries and Oceans Canada",
+   "hours": [
+    "2026-11-21T17:00:17Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.02,
+   "nearestOffsetHours": 162.02
+  },
+  "marine-refuges": {
+   "title": "Canada's marine refuges and other effective area-based conservation measures (Fisheries and Oceans Canada, OGL-Canada)",
+   "roots": [
+    "marine-refuges.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-11-28T11:01:11Z",
+   "updated": "2026-11-21T17:10:24Z",
+   "hour": "2026-11-21T17:00:45Z",
+   "modelRun": null,
+   "source": "Fisheries and Oceans Canada",
+   "hours": [
+    "2026-11-21T17:00:45Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 162.01,
+   "nearestOffsetHours": 162.01
+  }
+ }
+}

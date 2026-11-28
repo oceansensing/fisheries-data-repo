@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "dfo-areas",
+ "title": "Atlantic and Arctic Canada's fisheries management areas, species by species (Fisheries and Oceans Canada, OGL-Canada)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T16:55:28Z",
+ "modelRun": null,
+ "source": "Fisheries and Oceans Canada",
+ "hours": [
+  "2026-11-21T16:55:28Z"
+ ],
+ "files": {
+  "dfo-areas.json": {
+   "bytes": 25223292,
+   "sha256": "88088d619168f65bade67c3bcf37ce018cc39f58f24ff5b18e54375f64de04d5"
+  }
+ },
+ "trees": {
+  "land/dfo-areas": "5161c255333e"
+ }
+}

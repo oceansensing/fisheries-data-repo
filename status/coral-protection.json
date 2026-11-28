@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "coral-protection",
+ "title": "Deep-sea coral protection areas closed to bottom-tending gear (NOAA Office for Coastal Management, MarineCadastre.gov)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2022-02-23T14:23:41Z",
+ "modelRun": null,
+ "source": "NOAA Office for Coastal Management, MarineCadastre.gov",
+ "hours": [
+  "2022-02-23T14:23:41Z"
+ ],
+ "files": {
+  "coral-protection.json": {
+   "bytes": 41794,
+   "sha256": "4902a9b3d64127c4490edd6f698b1415d8e3bb72863005b6412d5628b7aff4f3"
+  }
+ },
+ "trees": {
+  "land/coral-protection": "0dc1d6613b52"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "marine-refuges",
+ "title": "Canada's marine refuges and other effective area-based conservation measures (Fisheries and Oceans Canada, OGL-Canada)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T17:00:45Z",
+ "modelRun": null,
+ "source": "Fisheries and Oceans Canada",
+ "hours": [
+  "2026-11-21T17:00:45Z"
+ ],
+ "files": {
+  "marine-refuges.json": {
+   "bytes": 839351,
+   "sha256": "282d6038be450f74e59d20a19763aa67b066b0e5bc6ab8d0e8f79371dfa3b86f"
+  }
+ },
+ "trees": {
+  "land/marine-refuges": "0a35e4a4a3a1"
+ }
+}

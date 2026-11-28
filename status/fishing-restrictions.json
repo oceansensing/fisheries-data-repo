@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "fishing-restrictions",
+ "title": "Bottom-gear and trawl fishing restrictions in U.S. waters, a NOAA compilation (NOAA Fisheries, Office of Habitat Conservation)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2025-09-26T16:18:41Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries",
+ "hours": [
+  "2025-09-26T16:18:41Z"
+ ],
+ "files": {
+  "fishing-restrictions.json": {
+   "bytes": 1802426,
+   "sha256": "778e182d25c9706431629c38dd760cd3dfbbc871060f14fb0c0c0354fdbfbfd7"
+  }
+ },
+ "trees": {
+  "land/fishing-restrictions": "c4039ee2aa06"
+ }
+}

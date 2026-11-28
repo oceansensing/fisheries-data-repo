@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "garfo-areas",
+ "title": "Greater Atlantic regulated fishing areas: closures, gear, mesh, exemption and management areas (NOAA Fisheries GARFO)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-04-29T17:40:38Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries GARFO",
+ "hours": [
+  "2026-04-29T17:40:38Z"
+ ],
+ "files": {
+  "garfo-areas.json": {
+   "bytes": 35078286,
+   "sha256": "2b91f6c7d40acc915dba0dd1d33d9a6d82ea670b652a677e42f1166c613e7bb2"
+  }
+ },
+ "trees": {
+  "land/garfo-areas": "b6bebe8a59ab"
+ }
+}

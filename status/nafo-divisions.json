@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "nafo-divisions",
+ "title": "NAFO subareas, divisions and subdivisions (Fisheries and Oceans Canada, OGL-Canada)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T17:00:17Z",
+ "modelRun": null,
+ "source": "Fisheries and Oceans Canada",
+ "hours": [
+  "2026-11-21T17:00:17Z"
+ ],
+ "files": {
+  "nafo-divisions.json": {
+   "bytes": 3072746,
+   "sha256": "31b87d9c5b7ba45aaf2b615bb1930437e998ac7fb0d621ffe00e549fce6c13c9"
+  }
+ },
+ "trees": {
+  "land/nafo-divisions": "95ea6ac67aa8"
+ }
+}

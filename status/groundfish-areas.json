@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "groundfish-areas",
+ "title": "West Coast groundfish conservation areas: rockfish, yelloweye rockfish and cowcod conservation areas and groundfish exclusion areas (NOAA Fisheries West Coast Region)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T11:01:11Z",
+ "updated": "2026-11-21T17:10:24Z",
+ "hour": "2026-11-21T16:50:21Z",
+ "modelRun": null,
+ "source": "NOAA Fisheries West Coast Region",
+ "hours": [
+  "2026-11-21T16:50:21Z"
+ ],
+ "files": {
+  "groundfish-areas.json": {
+   "bytes": 1151017,
+   "sha256": "76a429b23d765b678ac1b973b202af0a9ac89d46a034ad89aa2b25f5984347e0"
+  }
+ },
+ "trees": {
+  "land/groundfish-areas": "8647f5e62149"
+ }
+}

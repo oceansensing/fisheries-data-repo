@@ -1,0 +1,29 @@
+{
+ "schema": 1,
+ "generated": "2026-11-28T11:01:11Z",
+ "mode": "full",
+ "fates": {
+  "fao-areas": "fresh",
+  "fishery-bodies": "fresh",
+  "council-regions": "fresh",
+  "groundfish-areas": "fresh",
+  "garfo-areas": "fresh",
+  "statistical-areas": "fresh",
+  "hapc": "fresh",
+  "fishing-restrictions": "fresh",
+  "efh-closed-areas": "fresh",
+  "coral-protection": "fresh",
+  "ices-areas": "fresh",
+  "ices-rectangles": "fresh",
+  "dfo-areas": "fresh",
+  "nafo-divisions": "fresh",
+  "marine-refuges": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [],
+ "tile_keys": {}
+}
